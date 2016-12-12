@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	function makeDiv() {
-		for (var i = 0; i < 16; i++) {
+		for (var i = 0; i < 1600; i++) {
 			var $div = $('<div class="grid"></div>');
 			$('#mainContain').append($div);
 			};
