@@ -8,17 +8,28 @@ $(document).ready(function(){
 	
 	makeDiv();
 
-	$('.grid').mouseenter(
-		function(){
+	function sketch() {
+		$('.grid').mouseenter(function(){
 			$(this).addClass("hover");
 		});
-		// function(){
-		// 	$(this).removeClass("hover");
-		// });
+	};
+
+	sketch();
+
 
 	$('button').click(function(){
-		$('.grid').removeClass("hover");
-		prompt("New sketch grid size?")
+		$('.grid').remove();
+		var newGrid = prompt("New sketch grid size?")
+		function makeNewDiv() {
+		for (var i = 0; i < (newGrid*newGrid); i++) {
+			var $div = $('<div class="grid"></div>');
+			$('#mainContain').append($div);
+			};
+		$('.grid').height(400/newGrid).width(400/newGrid);
+		};
+	
+	makeNewDiv();
+	sketch();
 	});
 });
 
