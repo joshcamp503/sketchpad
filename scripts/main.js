@@ -8,10 +8,16 @@ $(document).ready(function(){
 	
 	makeDiv();
 
+
 	function sketch() {
 		$('.grid').mouseenter(function(){
-			$(this).addClass("hover");
+			var randColor = '#' + (Math.random()*0xFFFFFF<<0).toString(16);
+			$(this).css("background-color",randColor);
 		});
+	// function sketch() {
+	// 	$('.grid').mouseenter(function(){
+	// 		$(this).addClass("hover");
+	// 	});
 	};
 
 	sketch();
@@ -32,5 +38,6 @@ $(document).ready(function(){
 	sketch();
 	});
 });
+
 
 
