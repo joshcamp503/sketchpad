@@ -8,13 +8,18 @@ $(document).ready(function(){
 	
 	makeDiv();
 
-	$('.grid').hover(
+	$('.grid').mouseenter(
 		function(){
 			$(this).addClass("hover");
-		},
-		function(){
-			$(this).removeClass("hover");
 		});
+		// function(){
+		// 	$(this).removeClass("hover");
+		// });
+
+	$('button').click(function(){
+		$('.grid').removeClass("hover");
+		prompt("New sketch grid size?")
+	});
 });
 
 
