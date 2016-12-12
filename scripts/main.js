@@ -4,9 +4,17 @@ $(document).ready(function(){
 			var $div = $('<div class="grid"></div>');
 			$('#mainContain').append($div);
 			};
-		}
+		};
 	
 	makeDiv();
+
+	$('.grid').hover(
+		function(){
+			$(this).addClass("hover");
+		},
+		function(){
+			$(this).removeClass("hover");
+		});
 });
 
 
